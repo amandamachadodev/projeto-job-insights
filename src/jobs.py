@@ -1,6 +1,5 @@
 from functools import lru_cache
-
-"iniciando o projeto"
+import csv
 
 @lru_cache
 def read(path):
@@ -16,4 +15,11 @@ def read(path):
     list
         List of rows as dicts
     """
-    return []
+    with open(path, encoding = "utf-8") as file:
+        jobs_reader = csv.DictReader(file)
+        jobs = []
+        for job in jobs_reader:
+            jobs.append(job)
+        return jobs
+    # Usando o conceito de desempacotamento
+    
