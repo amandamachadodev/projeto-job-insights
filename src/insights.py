@@ -64,6 +64,8 @@ def get_unique_industries(path):
     for industry in jobs:
         if (industry["industry"] in job_industries):
             job_industries = job_industries
+        elif (industry["industry"] == ""):
+            job_industries = job_industries
         else:
             job_industries.append(industry["industry"])
     return job_industries
