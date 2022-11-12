@@ -23,4 +23,3 @@ def read(path):
             jobs.append(job)
         return jobs
     # Usando o conceito de desempacotamento
-    
