@@ -107,7 +107,8 @@ def get_max_salary(path):
     jobs = read(path)
     max_salary = 0
     for salary in jobs:
-        if (salary["max_salary"].isnumeric() and int(salary["max_salary"]) > int(max_salary)):
+        if (salary["max_salary"].isnumeric() and
+        int(salary["max_salary"]) > int(max_salary)):
             max_salary = salary["max_salary"]
         else:
             max_salary = max_salary
