@@ -213,6 +213,3 @@ def filter_by_salary_range(jobs, salary):
         except ValueError:
             salary_filter = salary_filter
     return salary_filter
-
-
-
