@@ -12,4 +12,3 @@ def test_sort_by_criteria():
 
     sort_by(jobs, "max_salary")
     assert jobs[0]["max_salary"] == str(get_max_salary(path))
-

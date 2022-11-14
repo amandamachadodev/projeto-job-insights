@@ -15,9 +15,16 @@ from .more_insights import (
     slice_jobs,
     get_int_from_args,
     build_jobs_urls,
+    get_job
 )
 
 bp = Blueprint("client", __name__, template_folder="templates")
+
+
+@bp.route("/job/<index>")
+def jobs_index(index):
+    data = read("src/jobs.csv")
+    return render_template("job.jinja2", job=get_job(index, data))
 
 
 @bp.route("/.images/job.png")
